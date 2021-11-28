@@ -35,6 +35,7 @@
 ## TECHNOLOGIES USESD
 - Provide an overview of the **languages**, **frameworks**, and **other tools** used in the project.
 - Be **sure** to provide a *short description* **where in the project the technology is used** and a **URL to its Github repository**
+	* [Bootstrap](https://github.com/twbs/bootstrap)
 
 ## TESTING
 - You can provide **step-by-step instructions** for the examiner to test the project.
@@ -48,6 +49,8 @@
 ## CREDITS
 - Include all code, content, and assets you used. 
 - **If you used a piece of code from external website, acknowledge and provide link**
-
+- Libraries:
+	* [Leaflet](https://github.com/Leaflet/Leaflet)
+	
 ## DISCLAIMER
 Contents of this repository may have been obtained from open sources and that the creator acknwoledges that not all content is not original.

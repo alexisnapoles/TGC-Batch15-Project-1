@@ -1,25 +1,13 @@
-// 1. We define the chart options. 
-const options =  {
-    chart: {
-        type: 'line',
-        height:"50%"
-    },
-    // each series represents one set of data
-    series:[
-        {
-            name: 'sightings',
-            data:[10, 13, 15, 22, 34, 23, 55, 78, 44]
-        }
-    ],
-    // what is are the labels along the x-axis (horizontal line)
-    xaxis: {
-        categories:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct']
-    },
-    
-}
- 
-// create the chart
-const chart = new ApexCharts(document.querySelector('#chart'), options);
- 
-// render the chart
-chart.render()
+/* MAIN FILE FOR BOTH VIEW AND DATA JS */
+let philippines = [14.5546732,120.99817];
+let map = L.map('map').setView(philippines, 13);
+
+// TILE LAYER
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiYWxleGlzLWRlbGF0b3JyZSIsImEiOiJja3cwOWloOWhhZm5nMzFxMWRwam80a2RxIn0.8ktIyvaWh0aHXl_cfPNQnw'
+}).addTo(map);
